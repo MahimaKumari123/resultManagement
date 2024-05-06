@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        .button {
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color:  rgb(6, 139, 241);
+
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .heading {
+        background-color: #D5E8D4;
+        height: 50px;
+        width: 100%;
+        padding-top: 5px;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 30px;
+        border: 2px solid #A8CA96;
+        font-weight: bold;
+        }
+
+        .navbar-custom {
+            background-color: #8fbc8f;
+            border: 3px solid #556b2f;
+
+        }
+
+        .button1:active {
+            background-color: #f0e68c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .navbar-custom {
+            height: 80px;
+        }
+
+
+        a.login {
+            background-color: #F0E68C;
+            color: rgb(17, 3, 3);
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #F4A460;
+
+        }
+
+        a.link {
+            background-color: #008CBA;
+            color: white;
+
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 8px;
+        }
+
+        h2{
+            margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+    
+        }
+        table {
+            width: 20%;
+            table-layout: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        tr,
+        td {
+            display: flex;
+            padding: 15px;
+            margin: 0px 35px;
+            text-align: center;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<div class="heading">Result Management System</div>
+<br>
+<br>
+<h2 align="center"><b>Login As</b></h2>
+
+
+<table class="center">
+    <tbody>
+        <tr>
+            <td>
+                <form action="/teacher_login" method="get">
+
+                    <!-- <button type="submit" class="button">Teacher</button> -->
+                    <button type="submit" class="button">Teacher</button>
+                </form>
+            </td>
+            <td>
+                <form action="/student" method="get">
+                    <button type="submit" class="button">Student</button>
+                </form>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+</html>

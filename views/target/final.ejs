@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        h3 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+
+            padding: 8px;
+            height: 50px;
+            width: 60px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .button1:active {
+            background-color: #f0e68c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .heading {
+            background-color: #D5E8D4;
+    height: 50px;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    border: 2px solid #A8CA96;
+    font-weight: bold;
+        }
+
+        .button {
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color:  rgb(6, 139, 241);
+
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            /* border: 3px solid green; */
+            padding: 10px;
+        }
+    </style>
+</head>
+<div class="heading">Result Management System</div>
+<body>
+    <a href="/home" style="float:right" class="button mt-4 mr-4">Logout</a>
+    <a href="/student" style="float:left" class="button mt-4 ml-4">Back</a>
+
+    <div class="container" align="center">
+        <!-- <h3 align="center">Result Management System</h3> -->
+
+        <h3 style="text-align: center; margin: 50px;">Result</h3>
+        <table class="table table-light table-striped">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(user){ %>
+                    <tr>
+                        <td>
+                            <%= user.Roll_no %>
+                        </td>
+                        <td>
+                            <%= user.Name %>
+                        </td>
+                        <td>
+                            <%= user.DateOfBirth %>
+                        </td>
+                        <td>
+                            <%= user.Score %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

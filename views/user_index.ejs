@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .button {
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color: rgb(6, 139, 241);
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .use
+        {
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color: transparent;
+            border: 1px solid rgb(6, 139, 241);
+            color: rgb(6, 139, 241);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .use:hover
+        {
+            text-decoration: none;
+            background-color: rgb(6, 139, 241);
+            border: none;
+            color: white;
+        }
+
+        .button1:active {
+            background-color: #f0e68c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+
+        .heading {
+            background-color: #D5E8D4;
+    height: 50px;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    border: 2px solid #A8CA96;
+    font-weight: bold;
+        }
+
+        .container {
+            margin: auto;
+            width: 80%;
+            /* border: 3px solid green; */
+            padding: 10px;
+        }
+    </style>
+</head>
+<div class="heading">Result Management System</div>
+
+<a href="/home" style="float:right" class="button mt-4 mr-4">Logout</a>
+
+<body>
+    <a href="/teacher_login" style="float:left" class="button mt-4 ml-4">Back</a>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+
+        <a href="/add" style="float:right" class="use">Add User</a>
+        <br>
+        <h3 align="center"><b>List Of Records</b></h3>
+        <br>
+
+        <table class="table table-light table-striped">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Score</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(user){ %>
+                    <tr>
+                        <td>
+                            <%= user.Roll_no %>
+                        </td>
+                        <td>
+                            <%= user.Name %>
+                        </td>
+                        <td>
+                            <%= user.DateOfBirth.toLocaleDateString('en-US') %>
+                        </td>
+                        <td>
+                            <%= user.Score %>
+                        </td>
+                        <td>
+                            <a href="edit/<%= user.Student_id %>" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="delete/<%= user.Student_id%>" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

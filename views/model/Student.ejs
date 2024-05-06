@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <h2>Result Management System</h2>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .button {
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color:  rgb(6, 139, 241);
+
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            /* border: 3px solid green; */
+            padding: 10px;
+        }
+
+        .button1:active {
+            background-color: #f0e68c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .heading {
+            background-color: #D5E8D4;
+    height: 50px;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    border: 2px solid #A8CA96;
+    font-weight: bold;
+        }
+    </style>
+</head>
+<div class="heading">Result Management System</div>
+
+<body>
+
+    <span><a href="/home" style="float:right" class="button mt-4 mr-4">Logout</a>
+        <a href="/" style="float:left" class="button mt-4 ml-4">Back</a></span>
+    <br>
+    <br>
+    <br>
+
+
+    <h2 align="center">Find Result</h2>
+
+    <div class="container">
+
+        <form action="/find" method="post">
+            <div class="form-group">
+                <label for="Roll_no">Roll No:</label>
+                <input type="text" class="form-control" id="Roll_no" placeholder="Enter Roll No" name="Roll_no"
+                    novalidate>
+            </div>
+            <div class="form-group">
+                <label for="Name">Name:</label>
+                <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name" novalidate>
+            </div>
+
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
